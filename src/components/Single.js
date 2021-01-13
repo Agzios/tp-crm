@@ -9,19 +9,28 @@ const Single = (props) => {
                     src={`https://source.unsplash.com/collection/772333/1000x1000?i=${props.id}`}
                     alt="{props.item.prenom}"
                 />
+
                 <span className="card-title">
                     {props.item.prenom} {props.item.nom} -{" "}
                     {props.item.compagnie}
                 </span>
             </div>
+
             <div className="card-content">
                 <span className="card-title">{props.item.email} </span>
+
                 <div className="row">
                     <blockquote>
                         <h5>{props.item.notes}</h5>
                     </blockquote>
                 </div>
             </div>
+
+            <div className="card-action">
+                    <button className='btn waves-effect waves-light red darken-4'>
+                        Supprimer
+                    </button>
+                </div>
         </div>
     </li>
     );

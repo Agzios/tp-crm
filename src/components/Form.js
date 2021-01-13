@@ -1,4 +1,5 @@
 import React from 'react';
+import Input from './Input.js';
 
 class Form extends React.Component {
 
@@ -7,24 +8,19 @@ class Form extends React.Component {
             <div className="row">
                 <form className="col s12">
                     <div className="row">
-                        <div className="input-field col s6">
-                            <input placeholder="Placeholder" id="first_name" type="text" className="validate" />
-                            <label for="first_name">First Name</label>
-                        </div>
+                        <Input id='prenom' content='Prénom' />
+                        <Input id='nom' content='Nom' />
+                    </div>
 
-                        <div className="input-field col s6">
-                            <input id="last_name" type="text" className="validate" />
-                            <label for="last_name">Last Name</label>
-                        </div>
+                    <div className="row">
+                        <Input id='email' content='Email' />
+                        <Input id='compagnie' content='Société' />
+                    </div>
 
-                        <div className="input-field col s6">
-                            <input placeholder="Placeholder" id="email" type="text" className="validate" />
-                            <label for="email">Email</label>
-                        </div>
-
-                        <div className="input-field col s6">
-                            <input id="compagnie" type="text" className="validate" />
-                            <label for="compagnie">Compagnie</label>
+                    <div className="row">
+                        <Input id='notes' content='Notes' />
+                        <div className='input-field col s4' >
+                            <button type="submit" className='btn waves-effect waves-light'>Ajouter</button>
                         </div>
                     </div>
                 </form>

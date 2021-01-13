@@ -5,7 +5,7 @@ class Grid extends Component {
     
     renderList = () => {
         return this.props.items.map((item, i) => (
-            <Single id={ i + 1 } item={ item } />
+            <Single key={ i + 1 } id={ i + 1} item={ item } />
         ));
     };
 
